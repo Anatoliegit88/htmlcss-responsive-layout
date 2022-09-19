@@ -16,7 +16,7 @@ img {
 /* HEADER */
 .container {
   /* width: 100%; */
-  border: 2px solid red;
+  /* border: 2px solid red; */
   /* display: flex; */
 }
 
@@ -30,8 +30,21 @@ img {
   justify-content: space-between;
 }
 
+.hamburger {
+  display: flex;
+}
+
+.fa .fa-bars .fa-solid {
+  font-size: 40px;
+}
+
 .menu-header {
-  display: block;
+  display: flex;
+  list-style-type: none;
 }
 
 /* MAIN */
+
+.container-cards {
+  display: flex;
+}
