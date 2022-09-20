@@ -14,7 +14,7 @@ img {
 }
 
 /* HEADER */
-.container {
+#header {
   /* width: 100%; */
   /* border: 2px solid red; */
   display: flex;
@@ -40,37 +40,133 @@ img {
 }
 
 .menu-header {
-  display: flex;
-  list-style-type: none;
+  display: none;
 }
 
 .ul {
+  list-style-type: none;
   display: flex;
+}
+
+header .ul li {
+  margin-left: 1em;
 }
 /* MAIN */
 
+/* MEDIA-QWERY-TABLET */
+@media screen and (min-width: 768px) {
+  #header {
+    display: flex;
+  }
+
+  #section-cards .container-cards {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+  }
+
+  /* #section-cards .card {
+    width: calc(100% / 3 - (1.5em * 2 / 3));
+  }
+
+  #section-cards .card:first-child {
+    width: calc(100% / 3 * 2 - 1.5em);
+  } */
+
+  #section-planning {
+    display: flex;
+  }
+  .container-cards {
+    display: flex;
+    flex-wrap: wrap;
+  }
+}
+
+/* MEDIA-QWERY-DESKTIOP */
+@media screen and (min-width: 992px) {
+  .container-header {
+    padding-left: 7em;
+    padding-right: 7em;
+  }
+
+  #header {
+    display: flex;
+  }
+
+  .menu-header {
+    display: flex;
+  }
+
+  #section-cards {
+    display: flex;
+  }
+
+  .container-cards {
+    display: flex;
+    flex-wrap: wrap;
+  }
+
+  .card-first .card {
+    height: 15em;
+  }
+  #section-planning {
+    display: flex;
+  }
+  .hamburger {
+    display: none;
+  }
+}
+
+/* SECTION-CARDS */
+
+#section-cards .card {
+  /* margin: 1.5em auto; */
+  /* display: block; */
+}
 .container-cards {
-  display: block;
-  margin: 1.5rem auto;
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.card-first {
+  background-color: rgb(0, 200, 255);
+  flex-basis: calc(66.6666% - 1em);
+  border-radius: 4px;
+  height: 30em;
+  margin-left: 0.5em;
+  margin-right: 0.5em;
+  margin-top: 1em;
+  padding: 1em;
 }
 
 .card {
-  border: 1px solid black;
-  border-radius: 1em;
-  width: 10rem;
-  height: 10rem;
-  margin: 1em;
+  background-color: rgb(0, 200, 255);
+  flex-basis: calc(33.3333% - 1em);
+  border-radius: 8px;
+  height: 30em;
+  margin-left: 0.5em;
+  margin-right: 0.5em;
+  margin-top: 1em;
+  padding: 1em;
 }
+
+/* SECTION-PLANNING */
 
 .section-planning {
   background-color: violet;
 }
 .container-flex {
   display: block;
-  height: 20rem;
-  width: 20rem;
+
+  width: 100%;
+}
+.planning-1 {
+  background-color: violet;
+  width: 50%;
 }
 
-.planning {
+.planning-2 {
   background-color: white;
+  border-radius: 1rem;
+  width: 50%;
 }
