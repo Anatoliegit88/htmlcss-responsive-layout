@@ -15,18 +15,15 @@ img {
 
 /* HEADER */
 #header {
-  /* width: 100%; */
-  /* border: 2px solid red; */
   display: flex;
 }
 
 .container-header {
   justify-content: space-between;
-  background-color: rgb(4, 161, 213);
+  background-color: rgb(53, 90, 255);
   display: flex;
   align-items: center;
   height: 5rem;
-  border: 2px solid green;
   width: 100%;
   padding: 1rem;
 }
@@ -59,23 +56,23 @@ header .ul li {
     display: flex;
   }
 
-  #section-cards .container-cards {
+  #section-cards,
+  .container-cards {
     display: flex;
     flex-wrap: wrap;
     justify-content: space-between;
   }
 
-  /* #section-cards .card {
-    width: calc(100% / 3 - (1.5em * 2 / 3));
+  .card-first {
+    display: block;
   }
 
-  #section-cards .card:first-child {
-    width: calc(100% / 3 * 2 - 1.5em);
-  } */
-
-  #section-planning {
-    display: flex;
+  #section-planning,
+  .container-flex {
+    display: block;
+    width: 100%;
   }
+
   .container-cards {
     display: flex;
     flex-wrap: wrap;
@@ -89,6 +86,9 @@ header .ul li {
     padding-right: 7em;
   }
 
+  .hamburger {
+    display: none;
+  }
   #header {
     display: flex;
   }
@@ -99,6 +99,8 @@ header .ul li {
 
   #section-cards {
     display: flex;
+    width: 80%;
+    margin: 0 auto;
   }
 
   .container-cards {
@@ -106,50 +108,57 @@ header .ul li {
     flex-wrap: wrap;
   }
 
-  .card-first .card {
-    height: 15em;
+  .card-first,
+  .card {
+    display: flex;
+    width: 50%;
   }
   #section-planning {
     display: flex;
   }
-  .hamburger {
-    display: none;
+  .container-flex {
+    display: flex;
+    width: 100%;
+  }
+  .planning-1,
+  .planning-2 {
+    display: flex;
+    width: 50%;
   }
 }
 
 /* SECTION-CARDS */
 
-#section-cards .card {
-  /* margin: 1.5em auto; */
-  /* display: block; */
+#section-cards {
+  display: flex;
 }
 .container-cards {
   display: flex;
   flex-wrap: wrap;
 }
-
-.card-first {
-  background-color: rgb(0, 200, 255);
-  flex-basis: calc(66.6666% - 1em);
-  border-radius: 4px;
-  height: 30em;
-  margin-left: 0.5em;
-  margin-right: 0.5em;
-  margin-top: 1em;
-  padding: 1em;
-}
-
-.card {
-  background-color: rgb(0, 200, 255);
+.card-block {
+  background-color: rgb(138, 210, 255);
   flex-basis: calc(33.3333% - 1em);
   border-radius: 8px;
-  height: 30em;
+  margin-left: 0.5em;
+  margin-right: 0.5em;
+  margin-top: 1em;
+  padding: 1em;
+  text-align: center;
+}
+.card-first {
+  justify-content: space-between;
+  flex-basis: calc(66.6666% - 1em);
+  background-color: rgb(138, 210, 255);
+  border-radius: 8px;
   margin-left: 0.5em;
   margin-right: 0.5em;
   margin-top: 1em;
   padding: 1em;
 }
-
+.fa-solid {
+  font-size: xx-large;
+}
 /* SECTION-PLANNING */
 
 .section-planning {
@@ -157,16 +166,5 @@ header .ul li {
 }
 .container-flex {
   display: block;
-
   width: 100%;
-}
-.planning-1 {
-  background-color: violet;
-  width: 50%;
-}
-
-.planning-2 {
-  background-color: white;
-  border-radius: 1rem;
-  width: 50%;
 }
